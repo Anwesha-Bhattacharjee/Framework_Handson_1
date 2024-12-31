@@ -8,16 +8,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class LoginPage {
-	
-	WebDriver driver;
+public class LoginPage extends BasePage{
 	
 	public LoginPage(WebDriver driver) {
+		super(driver);
 		// TODO Auto-generated constructor stub
-		System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmssSSSSSSS")));
-		this.driver = driver;
-		
 	}
+
+	//WebDriver driver;
+	
+//	public LoginPage(WebDriver driver) {
+//		// TODO Auto-generated constructor stub
+//		System.out.println(LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmssSSSSSSS")));
+//		this.driver = driver;
+//		
+//	}
 	
 	
 	//WebElement username = driver.findElement(By.id("email1"));
