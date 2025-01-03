@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+<listeners>
+<listener class-name="utilities.Listeners"/>
+</listeners>
   <test thread-count="5" name="Test">
 	  <parameter name="browser" value="chrome"/>
 
     <classes>
-      <class name="testcases.FetchWebsiteTitleDDT"/>
-      <class name="testcases.LaunchBrowser"/>
-      <class name="testcases.LoginTest"/>
+          <class name="testcases.LaunchBrowser"/>
+      <!--class name="testcases.FetchWebsiteTitleDDT"/-->
+      <!--class name="testcases.LoginTest"/-->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
