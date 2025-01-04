@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -26,24 +27,18 @@ public class LoginTest extends TestBase {
     	lp.enterPassword(properties.getProperty("pwd"));
     	lp.clickSignInBtn();
     	try {
-    		driver.findElement(By.className("errorMessage"));
-    		System.out.println("username or pass is wrong");
-    		Assert.assertEquals(false, true);
+    		HomePage hp = new HomePage(driver);
+    		WebElement cartBtn = hp.getCartButton();
+    		System.out.println("Total courses offered " + hp.getCourseCards().size());
     	}
     	catch (Exception e) {
     		//e.printStackTrace();
-    		//Assert.fail("username or pass is wrong");
-    		System.out.println("username or pass is correct"+e.getMessage());
-    		Assert.assertEquals(true, true);
+    		System.out.println(driver.findElement(By.className("errorMessage")).getText());
+    		Assert.assertEquals(false, true);
+    		
     	}
-    	HomePage hp = new HomePage(driver);
-    	String actualTitle = hp.getTitleOfHomePage();
-    	String expectedTitle = properties.getProperty("HomePageTitle");
-    	SoftAssert ast = new SoftAssert();
-    	ast.assertEquals(actualTitle, expectedTitle, "Login is done successfully");
     	
+    	driver.quit();
     	
-    	Thread.sleep(2000);
-        //assertTrue(true);
     }
 }
