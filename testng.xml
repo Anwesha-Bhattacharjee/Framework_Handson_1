@@ -8,9 +8,9 @@
 	  <parameter name="browser" value="chrome"/>
 
     <classes>
-          <class name="testcases.LaunchBrowser"/>
-      <!--class name="testcases.FetchWebsiteTitleDDT"/-->
-      <!--class name="testcases.LoginTest"/-->
+          <!--class name="testcases.LaunchBrowser"/>
+      <class name="testcases.FetchWebsiteTitleDDT"/-->
+      <class name="testcases.LoginTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
