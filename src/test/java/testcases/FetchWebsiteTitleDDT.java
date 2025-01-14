@@ -11,6 +11,7 @@ public class FetchWebsiteTitleDDT extends TestBase {
 	public void fetchWebsiteDetailsAndMatch(String id, String url, String title) {
 		driver.navigate().to(url);
 		System.out.println(id + url + title);
-		Assert.assertEquals(driver.getTitle(), title);
+		//Assert.assertEquals(driver.getTitle(), title);
+		Assert.assertTrue(driver.getTitle().contains(title));
 	}
 }

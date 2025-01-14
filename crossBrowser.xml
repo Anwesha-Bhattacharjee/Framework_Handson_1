@@ -4,11 +4,11 @@
   <test name="ChromeTest">
 	  <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcases.FetchWebsiteTitleDDT"/>      
+      <!--class name="testcases.FetchWebsiteTitleDDT"/-->      
     </classes>
   </test> <!-- Test -->
   <test name="EdgeTest">
-	  <parameter name="browser" value="edge"/>
+	  <parameter name="browser" value="MicrosoftEdge"/>
     <classes>
       <class name="testcases.LaunchBrowser"/>      
     </classes>

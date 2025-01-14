@@ -37,8 +37,8 @@ public class LoginTest extends TestBase {
     		Assert.assertEquals(false, true);
     		
     	}
-    	
-    	driver.quit();
+    	Thread.sleep(5000);
+    	//driver.quit();
     	
     }
 }
