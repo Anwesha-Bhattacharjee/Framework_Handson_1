@@ -14,7 +14,7 @@ import org.testng.asserts.SoftAssert;
 public class LaunchBrowser extends TestBase{
 
 @Test
-    public void validateLaunch() {
+    public void validateLaunch() throws InterruptedException {
     	String appUrl = properties.getProperty("appURL");
     	driver.get(appUrl);
     	driver.manage().window().maximize();
@@ -24,7 +24,7 @@ public class LaunchBrowser extends TestBase{
     	SoftAssert sa = new SoftAssert();
     	sa.assertEquals(actualTitle, expectedTitle, "Strings are matching");
     	sa.assertAll();
-    	
+    	Thread.sleep(5000);
         //assertTrue(true);
     }
 }
